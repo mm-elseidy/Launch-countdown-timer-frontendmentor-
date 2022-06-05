@@ -1,0 +1,171 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    width: 100%;
+}
+
+ul {
+    list-style: none;
+}
+
+body {
+    font-family: 'Red Hat Text', sans-serif;
+    background: hsl(235, 16%, 14%);
+    background-image: url('/images/bg-stars.svg');
+    background-size: fill;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    color: white;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+.stars {
+    position: absolute;
+}
+
+.hills {
+    position: absolute;
+    bottom: 0;
+}
+
+
+/* Main Container */
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 67vh;
+    gap: 25px;
+}
+
+.container h1 {
+    color: white;
+    font-size: 24px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 30px;
+}
+
+.countdown {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.countdown div {
+    margin: 10px;
+    position: relative;
+}
+
+.countdown div::before {
+    content: '';
+    position: absolute;
+    background: hsl(235, 16%, 14%);
+    width: 5px;
+    height: 8px;
+    left: 0;
+    top: 35%;
+    z-index: 100;
+    border-radius: 0 50% 50% 0;
+}
+
+.countdown div::after {
+    content: '';
+    position: absolute;
+    background: hsl(235, 16%, 14%);
+    width: 5px;
+    height: 8px;
+    right: 0;
+    top: 35%;
+    z-index: 100;
+    border-radius: 50% 0 0 50%;
+}
+
+.countdown p {
+    position: relative;
+    background: hsla(236, 21%, 26%, 0.723);
+    color: hsl(345, 95%, 68%);
+    font-size: 45px;
+    padding: 20px;
+    border-radius: 5px;
+    z-index: 10;
+}
+
+.countdown p::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background: hsla(228, 21%, 50%, 0.2);
+    z-index: 1;
+}
+
+.countdown h3 {
+    color: hsl(237, 18%, 59%);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 14px;
+    font-weight: 200;
+    margin-top: 10px;
+}
+
+
+/* Socials icons */
+
+.socials {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    z-index: 100;
+    transform: translateX(-50%);
+}
+
+.socials ul {
+    display: flex;
+}
+
+.socials ul li {
+    margin: 0 20px;
+}
+
+.socials ul li img:hover {
+    color: hsl(345, 95%, 68%);
+}
+
+@media(max-width: 500px) {
+    .container {
+        max-width: auto;
+        padding: 0 20px;
+    }
+    .container h1 {
+        text-align: center;
+    }
+}
+
+@media(min-width: 1440px) {
+    .hills img {
+        width: 1536px;
+    }
+}
+
+@media(min-width: 1600px) {
+    .hills img {
+        width: 1920px;
+    }
+}
